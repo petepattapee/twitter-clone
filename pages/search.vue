@@ -3,7 +3,7 @@
         <MainSection title="Search" :loading="loading">
 
             <Head>
-                <Title>Search</Title>
+                <Title>Search Page</Title>
             </Head>
 
 
