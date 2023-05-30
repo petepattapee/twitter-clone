@@ -1,6 +1,6 @@
-import { getRefreshToken } from "~~/server/db/refreshTokens";
-import { getUserById } from "~~/server/db/users";
-import { decodeRefreshToken, generateTokens } from "~~/server/utils/jwt";
+import { getRefreshToken } from "../../db/refreshTokens";
+import { getUserById } from "../../db/users";
+import { decodeRefreshToken, generateTokens } from "../../utils/jwt";
 
 export default defineEventHandler(async (e) => {
   const { refresh_token } = parseCookies(e);
