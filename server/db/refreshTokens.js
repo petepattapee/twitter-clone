@@ -6,7 +6,8 @@ export const createRefreshToken = (refreshToken) => {
   });
 };
 
-export const getRefreshTokenByToken = (token) => {
+// export const getRefreshTokenByToken = (token) => {
+export const getRefreshToken = (token) => {
   return prisma.refreshToken.findUnique({
     where: {
       token,

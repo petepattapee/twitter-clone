@@ -1,4 +1,4 @@
-import { getRefreshToken } from "../../db/refreshTokens";
+import { getRefreshToken } from "~~/server/db/refreshTokens";
 import { getUserById } from "../../db/users";
 import { decodeRefreshToken, generateTokens } from "../../utils/jwt";
 
