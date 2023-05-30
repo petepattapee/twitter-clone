@@ -1,5 +1,5 @@
 import { sendError } from "h3";
-import { getRefreshTokenByToken } from "../../db/refreshTokens.js";
+import { getRefreshToken } from "../../db/refreshTokens.js";
 import { decodeRefreshToken, generateTokens } from "../../utils/jwt.js";
 import { getUserById } from "../../db/users.js";
 
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     );
   }
 
-  const rToken = await getRefreshTokenByToken(refreshToken);
+  const rToken = await getRefreshToken(refreshToken);
 
   if (!rToken) {
     return sendError(
